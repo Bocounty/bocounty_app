@@ -5,6 +5,19 @@ class AboutUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        backgroundColor: const Color(0xffF5EFE4),
+        appBar: AppBar(
+          title: const Text('關於我們'),
+          backgroundColor: const Color(0xffF5EFE4),
+          elevation: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
+        body: Container());
   }
 }

@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 
+import 'package:app/about.dart';
 import 'package:app/guild/guild.dart';
 import 'package:app/shop.dart';
 import 'package:flutter/material.dart';
@@ -301,8 +302,7 @@ class _HomePageState extends State<HomePage> {
                     await Future.delayed(const Duration(milliseconds: 500));
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()),
+                      MaterialPageRoute(builder: (context) => const AboutUs()),
                     );
                   },
                   child: Container(
