@@ -203,11 +203,11 @@ class _ShopPageState extends State<ShopPage> {
                                       context: context,
                                       builder: (BuildContext context) {
                                         return AlertDialog(
-                                          title: const Text('提示'),
-                                          content: const Text('您的 Bcoin 餘額不足。'),
+                                          title: Text('提示'),
+                                          content: Text('您的 Bcoin 餘額不足。'),
                                           actions: <Widget>[
                                             TextButton(
-                                              child: const Text('關閉'),
+                                              child: Text('關閉'),
                                               onPressed: () {
                                                 Navigator.of(context)
                                                     .pop(); // 关闭对话框

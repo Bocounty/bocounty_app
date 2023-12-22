@@ -172,7 +172,7 @@ class _UserPageState extends State<UserPage> {
             });
           } else if (list[i]['type'] == 4) {
             setState(() {
-              _else = photo;
+              _else = apiUrl + photo;
               getImg++;
             });
             List else_ = [

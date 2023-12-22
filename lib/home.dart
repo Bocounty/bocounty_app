@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
         child: Scaffold(
             resizeToAvoidBottomInset: true,
             body: SingleChildScrollView(
-                child: Container(
+                child: SizedBox(
                     width: screenWidth,
                     // height: double.infinity,
                     child: Stack(
@@ -294,6 +294,31 @@ class _HomePageState extends State<HomePage> {
               // SizedBox(
               //   height: screenHeight * 0.2,
               // ),
+
+              GestureDetector(
+                  onTap: () async {
+                    _logoff(apiUrl);
+                    await Future.delayed(const Duration(milliseconds: 500));
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50,
+                    width: 200,
+                    child: const Text(
+                      '關於我們',
+                      style: TextStyle(
+                        color: Color(0xffffffff),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18.0,
+                        letterSpacing: 5,
+                      ),
+                    ),
+                  )),
               GestureDetector(
                   onTap: () async {
                     _logoff(apiUrl);
