@@ -168,7 +168,9 @@ class _Card1PageState extends State<Card1Page> {
                                   drawCardResult,
                                   fit: BoxFit.contain,
                                 )
-                              : const CircularProgressIndicator(), // 或其他加载指示符
+                              : Center(
+                                  child: Image.asset(
+                                      "/assets/images/logo.png")), // 或其他加载指示符
                         ),
                         SizedBox(height: screenHeight * 0.12),
                         TextButton(
